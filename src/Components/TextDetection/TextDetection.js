@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+import Navigation from '../Navigation/Navigation'
+import Footer from '../Footer/Footer'
 
 const Form = styled.form`
     width: 70%;
     margin: auto;
     display: flex;
     flex-direction: column;
+    padding-bottom: 50px;
     @media (max-width: 450px){
         width: 90%;
     }
@@ -32,7 +35,7 @@ const Button = styled.button`
     box-shadow: 0px 0px 5px -3px rgba(150,150,150,1);
     padding: 10px;
     font-size: 16px;
-    background: ${props => props.close ? "white" : "linear-gradient(to bottom,#2dabf9 5%,#0688fa 100%)"};
+    background: ${props => props.close ? "white" : "#F5B553"};
     letter-spacing: 1px;
 
     &:hover{
@@ -48,10 +51,10 @@ const Label = styled.label`
     margin-top: 10px;
     color: #404040;
 `
-const Header = styled.h2`
-    margin: 0;
-    margin-top: 20px;
+const Header = styled.h1`
     text-align: center;
+    padding-top: 130px;
+    padding-bottom: 30px;
 `
 const ModalOverlay = styled.div`
     position: absolute;
@@ -65,10 +68,10 @@ const ModalOverlay = styled.div`
 `
 const Modal = styled.div`
     position: relative;
-	width: 250px;
+	width: 300px;
 	height: auto;
     margin: auto;
-    margin-top: -300px;
+    margin-top: -350px;
 	padding: 30px;
 	background-color: white;
 	border-radius: 4px;
@@ -109,6 +112,7 @@ function TextDetection() {
 
     return (
         <div >
+            <Navigation />
 
             <Form onSubmit={e => handleCheck(e)}>
 
@@ -150,7 +154,7 @@ function TextDetection() {
                     </div>
                 }
             </Form>
-
+            <Footer />
         </div >
     )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Navigation from '../Navigation/Navigation'
 import Footer from '../Footer/Footer'
+import {connect} from 'react-redux'
 
 const Form = styled.form`
     width: 70%;
@@ -31,9 +32,9 @@ const Button = styled.button`
     margin-top: 20px;
     display: block;
     border: 1px solid #e6e6e6;
-    border-radius: 4px;
+    border-radius: 10px;
     box-shadow: 0px 0px 5px -3px rgba(150,150,150,1);
-    padding: 10px;
+    padding: 15px;
     font-size: 16px;
     background: ${props => props.close ? "white" : "#F5B553"};
     letter-spacing: 1px;
@@ -87,7 +88,7 @@ const Modal = styled.div`
     }
 `
 
-function TextDetection() {
+function TextDetection(props) {
 
     const [text, setText] = React.useState('');
     const [result, setResult] = React.useState();
@@ -117,15 +118,19 @@ function TextDetection() {
             <Form onSubmit={e => handleCheck(e)}>
 
                 <Header>
-                    Text-Detection
+                    {props.lan === "en"? "Word Count" : "စာလုံးရေ စစ်ဆေးခြင်း"}
                 </Header>
 
+                {props.lan === "en"?
                 <Label>
-                    -Your article has to be written in Unicode format.
-                    If not, you can convert here <a href="https://www.rabbit-converter.org/Rabbit/">Rabbit Converter</a>
-                    <br />
-                    -Copy and Paste your article below & Click Check Button
+                    <span style={{color:"red"}}>*</span>Your article has to be written in Unicode format.
+                    If not, you can convert here: <a href="https://www.rabbit-converter.org/Rabbit/">Rabbit Converter</a>
+                </Label>:
+                <Label>
+                    <span style={{color:"red"}}>*</span>သင့်၏ဆောင်းပါးသည် Unicode စနစ်ဖြင့်ရေးသားထားရမည်ဖြစ်သည်။
+                     Unicode ပြောင်းရန် :<a href="https://www.rabbit-converter.org/Rabbit/">Rabbit Converter</a>
                 </Label>
+                }
 
                 <TextArea rows="10" placeholder="Text..." required
                     onChange={e => handleChange(e)} autoFocus />
@@ -159,4 +164,10 @@ function TextDetection() {
     )
 }
 
-export default TextDetection
+const mapStateToProps = state => {
+    return {
+        lan: state.lan
+    }
+}
+
+export default connect(mapStateToProps)(TextDetection)

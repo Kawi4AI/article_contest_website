@@ -6,7 +6,7 @@ import Overview from './Overview'
 import JudgeSection from './JudgeSection'
 import Footer from '../Footer/Footer'
 import OurCommunity from './OurCommunity'
-import OurSponsors from './OurSponsors'
+import OurPartners from './OurPartners'
 import AboutUs from './AboutUs'
 
 function LandingPage() {
@@ -19,7 +19,7 @@ function LandingPage() {
             <Overview />
             <JudgeSection />
             <OurCommunity/>
-            <OurSponsors/>
+            <OurPartners/>
             <AboutUs/>
             <Footer/>
         </div>

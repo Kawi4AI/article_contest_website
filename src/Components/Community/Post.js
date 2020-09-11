@@ -33,14 +33,8 @@ function Post({ date, content, image, likes, comments, shares }) {
                 style={{height: 0,paddingTop: '60%'}}
             />
             <CardActions style={{display:"flex",justifyContent:"space-between"}}>
-                <Button startIcon={<ThumbUpAltIcon/>} style={{color:"grey"}}>
-                    {likes}
-                </Button>
-                <Button startIcon={<CommentIcon/>} style={{color:"grey"}}>
-                    {comments}
-                </Button>
-                <Button startIcon={<ShareIcon/>} style={{color:"grey"}}>
-                    {shares}
+                <Button style={{color:"grey"}}>
+                    See More
                 </Button>
             </CardActions>
         </Card>

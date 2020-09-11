@@ -203,7 +203,7 @@ function Community() {
                 {pages.map(value =>
                 <Grid key={value.id} item lg={4} sm={6} xs={12}   >
                     <a href={value.permalink_url} style={{textDecoration:"none",color:"black"}}>
-                    <Post date={value.updated_time}
+                    <Post date={value.updated_time.substring(0,10)}
                         content={value.message}
                         image={value.full_picture}
                         likes={70}

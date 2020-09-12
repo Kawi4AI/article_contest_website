@@ -1,30 +1,19 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import Post from '../Community/Post'
+import { Link } from 'react-router-dom'
 
-function OurCommunity(){
+function OurCommunity() {
 
-    return(
+    return (
         <section className="our_community">
+        <img className="wave_3" src="images/wave_3.svg" alt="Wave"></img>
         <h1 data-aos="fade-up">Our Community</h1>
-        <span className="bubble4"></span>
         <div className="our_community_main">
-            <div className="sub_text" data-aos="fade-right">
-                <p>Follow and See First<br/><span className="facebook_page_name">Kawi Facebook Page</span><br/>to know things<br/><span class="up_to_date">up-to-date</span></p>
-            </div>
-            <a href="#" style={{textDecoration:"none",color:"black"}} className="facebook_sample_post" data-aos="zoom-in">
-                    <Post date="Aug 21"
-                        content="Something about content Something about content Something about content Something about content Something about content"
-                        image="images/logo.jpg"
-                        likes={70}
-                        comments={2}
-                        shares={21}
-                    />
-            </a>
-            <div className="explore_area" data-aos="fade-left">
-                <Link to="/Community"><button>
-                    Explore
-                </button></Link>
+            <img className="our_community_main_left" src="images/our_community.svg" alt="Community Pic"/>
+            <div className="our_community_main_right" data-aos="fade-left">
+                <p>You can track us by following <br/><span className="facebook_page_name">Kawi Facebook Page</span><br/>to catch up things<br/><span className="up_to_date">up-to-date</span></p>
+                <Link to="/Community">
+                   <button data-aos-delay="200">Explore</button>
+                </Link>
             </div>
         </div>
     </section>

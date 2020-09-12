@@ -1,44 +1,81 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
-function JudgeSection(){
-   
-    return(
+function JudgeSection(props) {
+
+    return (
         <section className="judge_section">
-        <h1 data-aos="fade-up">Judge Section</h1>
-        <div className="judge_section_main">
-            <div className="person_card" data-aos="fade-up">
-                <img src="images/google_ceo.png" alt="Person Info"/>
-                <h2>Sundar Pichai</h2>
-                <p>CEO of Alphabet</p>
+            <h1 data-aos="fade-up">Judge Section</h1>
+            {props.lan === "en"?
+            <div className="judge_section_main">
+                <div class="person_card" data-aos="fade-up">
+                    <img src="images/DrHninAyeThant.jpg" alt="Person Info" />
+                    <h2>Dr. Hnin Aye Thant</h2>
+                    <p>Professor and Head (IST)</p>
+                    <p>University of Technology (Yatanarpon Cyber City)</p>
+                </div>
+                <div class="person_card" data-aos="fade-up">
+                    <img src="images/Htun Lin Kyaw.jpg" alt="Person Info" />
+                    <h2>Dr. Htun Lin Kyaw</h2>
+                    <p>Associate Professor (Myanmar Department)</p>
+                    <p>University of Technology (Yatanarpon Cyber City)</p>
+                </div>
+                <div class="person_card" data-aos="fade-up">
+                    <img src="images/DrHtweHtweNaing.jpg" alt="Person Info" />
+                    <h2>Dr. Htwe Htwe Naing</h2>
+                    <p>Associate Professor (Myanmar Department)</p>
+                    <p>University of Technology (Yatanarpon Cyber City)</p>
+                </div>
+                <div class="person_card" data-aos="fade-up">
+                    <img src="images/NYAN_LIN_HTET.jpg" alt="Person Info" />
+                    <h2>Mr. Nyan Lin Htet</h2>
+                    <p>Ministry of<br />foreign Affairs Myanmar</p>
+                </div>
+                <div class="person_card" data-aos="fade-up">
+                    <img src="images/HtinKyawAye.jpeg" alt="Person Info" />
+                    <h2>Mr. Htin Kyaw Aye</h2>
+                    <p>Founder of Ananda Data</p>
+                </div>
+            </div> :
+            <div class="judge_section_main">
+                <div class="person_card" data-aos="fade-up" >
+                    <img src="images/DrHninAyeThant.jpg" alt="Person Info" />
+                    <h2>ဒေါက်တာ နှင်းအေးသန့်</h2>
+                    <p>ဌာနမှုး(သတင်းအချက်အလက် နှင့်နည်းပညာဌာန)</p>
+                    <p>နည်းပညာတက္ကသိုလ် (ရတနာပုံဆိုက်ဘာစီးတီး)</p>
+                </div>
+                <div class="person_card" data-aos="fade-up">
+                    <img src="images/Htun Lin Kyaw.jpg" alt="Person Info" />
+                    <h2>ဒေါက်တာထွန်းလင်းကျော်</h2>
+                    <p>တွဲဖက်ပါမောက္ခ<br />(မြန်မာစာဌာန)</p>
+                    <p>နည်းပညာတက္ကသိုလ်<br />(ရတနာပုံဆိုက်ဘာစီးတီး)</p>
+                </div>
+                <div class="person_card" data-aos="fade-up">
+                    <img src="images/DrHtweHtweNaing.jpg" alt="Person Info" />
+                    <h2>ဒေါက်တာ ထွေးထွေးနိုင်</h2>
+                    <p>တွဲဖက်ပါမောက္ခ<br />(မြန်မာစာဌာန)</p>
+                    <p>နည်းပညာတက္ကသိုလ်<br />(ရတနာပုံဆိုက်ဘာစီးတီး)</p>
+                </div>
+                <div class="person_card" data-aos="fade-up">
+                    <img src="images/NYAN_LIN_HTET.jpg" alt="Person Info" />
+                    <h2>ဦးဉာဏ်လင်းထက်</h2>
+                    <p>နိုင်ငံခြားရေးဝန်ကြီးဌာန</p>
+                </div>
+                <div class="person_card" data-aos="fade-up">
+                    <img src="images/HtinKyawAye.jpeg" alt="Person Info" />
+                    <h2>ဦးထင်ကျော်အေး</h2>
+                    <p>Ananda Data တည်ထောင်သူ</p>
+                </div>
             </div>
-            <div className="person_card" data-aos="fade-up">
-                <img src="images/apple_ceo.jpg" alt="Person Info"/>
-                <h2>Tim Cook</h2>
-                <p>CEO of Apple</p>
-            </div>
-            <div className="person_card" data-aos="fade-up">
-                <img src="images/spacex_ceo.jpg" alt="Person Info"/>
-                <h2>Elon Musk</h2>
-                <p>CEO of SpaceX</p>
-            </div>
-            <div className="person_card" data-aos="fade-up">
-                <img src="images/twitter_ceo.jpg" alt="Person Info"/>
-                <h2>Jack Dorsey</h2>
-                <p>CEO of Twitter</p>
-            </div>
-            <div className="person_card" data-aos="fade-up">
-                <img src="images/microsoft_ceo.jpg" alt="Person Info"/>
-                <h2>Satya Nadella</h2>
-                <p>CEO of Microsoft</p>
-            </div>
-            <div className="person_card" data-aos="fade-up">
-                <img src="images/facebook_ceo.jpg" alt="Person Info"/>
-                <h2>Mark Zuckerberg</h2>
-                <p>CEO of Facebook</p>
-            </div>
-        </div>
-    </section>
+            }
+        </section>
     )
 }
 
-export default JudgeSection
+const mapStateToProps = state => {
+    return {
+        lan: state.lan
+    }
+}
+
+export default connect(mapStateToProps)(JudgeSection)

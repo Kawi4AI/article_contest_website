@@ -4,6 +4,7 @@ import Navigation from '../Navigation/Navigation'
 import Footer from '../Footer/Footer'
 import Grid from '@material-ui/core/Grid'
 import  Loader from '@material-ui/core/CircularProgress'
+import * as defaultPosts from './posts.json'
 
 function Community() {
 
@@ -18,13 +19,21 @@ function Community() {
             console.log(json);
             if(json.error==null){
                setPages(json.data)
+               setLoading(false)
+            }else{
+               setPages(defaultPosts.data)
+               setLoading(false)
             }
-            setLoading(false)
         })
+
       }, []);
     
 
-    return (loading? <Loader style={{position:"absolute",top:"40%",left:"48%"}}/> :
+    return (loading?
+        <div>
+        <Navigation/>
+        <Loader style={{position:"absolute",top:"40%",left:"48%"}}/>
+        </div> :
         <div>
             <Navigation/>
             <h1 style={{textAlign:"center",paddingTop:"130px",marginBottom:"30px"}}>Our Community</h1>

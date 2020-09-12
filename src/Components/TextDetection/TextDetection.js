@@ -21,7 +21,7 @@ const TextArea = styled.textarea`
     margin-top: 20px;
     border: 1px solid #e6e6e6;
     box-shadow: 0px 0px 5px -3px rgba(150,150,150,1);
-    border-radius: 4px;
+    border-radius: 14px;
 
     &:hover{
         box-shadow: 0px 0px 10px -3px rgba(150,150,150,1);
@@ -33,7 +33,7 @@ const Button = styled.button`
     margin-top: 20px;
     display: block;
     border: 1px solid #e6e6e6;
-    border-radius: 10px;
+    border-radius: 14px;
     box-shadow: 0px 0px 5px -3px rgba(150,150,150,1);
     padding: 15px;
     font-size: 16px;
@@ -55,8 +55,8 @@ const Label = styled.label`
 `
 const Header = styled.h1`
     text-align: center;
-    padding-top: 150px;
-    padding-bottom: 30px;
+    padding-top: 100px;
+    padding-bottom: 10px;
 `
 const ModalOverlay = styled.div`
     position: absolute;
@@ -94,6 +94,10 @@ function TextDetection(props) {
     const [text, setText] = React.useState('');
     const [result, setResult] = React.useState();
     const [showModal, setShowModal] = React.useState(false);
+
+    React.useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
 
     const handleChange = (e) => {
         e.preventDefault();

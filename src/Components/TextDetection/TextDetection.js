@@ -10,6 +10,7 @@ const Form = styled.form`
     display: flex;
     flex-direction: column;
     padding-bottom: 50px;
+    min-height: 90vh;
     @media (max-width: 450px){
         width: 90%;
     }
@@ -54,7 +55,7 @@ const Label = styled.label`
 `
 const Header = styled.h1`
     text-align: center;
-    padding-top: 130px;
+    padding-top: 150px;
     padding-bottom: 30px;
 `
 const ModalOverlay = styled.div`

@@ -15,7 +15,7 @@ import ShareIcon from '@material-ui/icons/Share'
 function Post({ date, content, image, likes, comments, shares }) {
 
     return (
-        <Card style={{ backgroundColor: "white" }}>
+        <Card style={{ backgroundColor: "white"}}>
             <CardHeader
                 avatar={
                     <Avatar alt="Page Profile" src="images/logo.jpg" />
@@ -23,9 +23,9 @@ function Post({ date, content, image, likes, comments, shares }) {
                 title="ကဝိ-KaWi"
                 subheader={date}
             />
-            <CardContent>
+            <CardContent style={{minHeight:"100px"}}>
                 <Typography variant="body2" color="textSecondary" component="p">
-                    {content.slice(0,50)+" ..."}
+                    {content.slice(0,100)+" ..."}
                  </Typography>
             </CardContent>
             <CardMedia

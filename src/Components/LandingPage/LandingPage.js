@@ -13,23 +13,15 @@ function LandingPage() {
 
     return (
         <div>
-            <h1 className="welcome_loader">
-                <span className="text-wrapper">
-                    <span className="letters">KAWI</span>
-                    <span className="line"></span>
-                </span>
-            </h1>
-            <div className="over_all">
-                <Navigation />
-                <Front />
-                <AboutContest />
-                <Overview />
-                <JudgeSection />
-                <OurCommunity />
-                <OurPartners />
-                <AboutUs />
-                <Footer />
-            </div>
+            <Navigation />
+            <Front />
+            <AboutContest />
+            <Overview />
+            <JudgeSection />
+            <OurCommunity />
+            <OurPartners />
+            <AboutUs />
+            <Footer />
         </div>
     )
 }

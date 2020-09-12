@@ -21,11 +21,18 @@ function Footer(){
         </div>
         <div class="right_footer">
             <div class="icons">
-                <i class="far fa-envelope"></i>
+                <a href="mailto:kawiis4all@gmail.com" style={{color:"white"}}>
+                    <i class="far fa-envelope"></i>
+                </a>
+                <a href="tel:09951716847" style={{color:"white"}}>
                 <i class="fas fa-phone-alt"></i>
+                </a>
+                <a href="https://www.facebook.com/datascienceandmachinelearning/" style={{color:"white"}}>
                 <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-twitter-square"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/kawi" style={{color:"white"}}>
                 <i class="fab fa-linkedin"></i>
+                </a>
             </div>
             <div class="copyright">
                 <p>Copyright © 2020.<br class="line_break"/> All rights reserved.</p>

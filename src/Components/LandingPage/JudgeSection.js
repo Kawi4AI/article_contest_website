@@ -38,7 +38,7 @@ function JudgeSection(props) {
                 </div>
             </div> :
             <div class="judge_section_main">
-                <div class="person_card" data-aos="fade-up" >
+                <div class="person_card" data-aos="fade-up">
                     <img src="images/DrHninAyeThant.jpg" alt="Person Info" />
                     <h2>ဒေါက်တာ နှင်းအေးသန့်</h2>
                     <p>ဌာနမှုး(သတင်းအချက်အလက် နှင့်နည်းပညာဌာန)</p>

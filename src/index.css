@@ -404,7 +404,7 @@ nav .switch {
 
 .about_the_contest .about_the_contest_main .left_about_the_contest_main p {
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
   padding-top: 5vh;
 }
 
@@ -860,6 +860,7 @@ nav .switch {
   overflow: hidden;
 }
 
+
 footer {
   position: relative;
   width: 100%;
@@ -1126,6 +1127,7 @@ footer .right_footer .copyright .line_break {
   }
   .about_the_contest {
     /* padding: 0vh 0vw 0vh 0vw; */
+    padding-bottom:50px ;
   }
   .about_the_contest h1 {
     text-align: center;
@@ -1161,7 +1163,7 @@ footer .right_footer .copyright .line_break {
   }
   .about_the_contest .about_the_contest_main .left_about_the_contest_main p {
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
     padding-top: 1vh;
   }
   .about_the_contest .about_the_contest_main .left_about_the_contest_main button {
@@ -1201,6 +1203,12 @@ footer .right_footer .copyright .line_break {
     display: inline-block;
   }
   .overview p {
+    text-align: center;
+  }
+  .overview ul{
+    text-align: center;
+  }
+  .overview li{
     text-align: center;
   }
   .judge_section {

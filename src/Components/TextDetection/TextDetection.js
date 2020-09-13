@@ -4,6 +4,10 @@ import Navigation from '../Navigation/Navigation'
 import Footer from '../Footer/Footer'
 import {connect} from 'react-redux'
 
+const max_count = 2500
+const min_count = 1600
+const form_link = "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAASkcDdhUNjY2MjlOWllQWFdQN0lTWEhLWlRGQzg4NC4u"
+
 const Form = styled.form`
     width: 70%;
     margin: auto;
@@ -37,7 +41,7 @@ const Button = styled.button`
     box-shadow: 0px 0px 5px -3px rgba(150,150,150,1);
     padding: 15px;
     font-size: 16px;
-    background: ${props => props.close ? "white" : "#F5B553"};
+    background: ${props => props.close ? "linear-gradient(315deg, #e6e6e6, #ffffff)" : "#F5B553"};
     letter-spacing: 1px;
 
     &:hover{
@@ -74,7 +78,9 @@ const Modal = styled.div`
 	height: auto;
     margin: auto;
     margin-top: -350px;
-	padding: 30px;
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px; 
 	background-color: white;
 	border-radius: 4px;
 	box-shadow: 0 0 50px rgba(black,0.5);
@@ -84,9 +90,7 @@ const Modal = styled.div`
         text-align: center;
         display: block;
     }
-    & > div{
-        display: flex;
-    }
+    
 `
 
 function TextDetection(props) {
@@ -107,7 +111,7 @@ function TextDetection(props) {
     const handleCheck = (e) => {
         e.preventDefault();
 
-        let temp = text.replace(/[\s\[\]!,*)@#%(&$_?.^"။၊]/g, '')
+        let temp = text.replace(/[\s\[\]:;\/\->|{}+-=<!,•`~'*)@#%(&$_?.^"။၊]/g, '')
             .match(/(([a-zA-Z0-9]+)|[က-အ|ဥ|ဦ](င်္|[က-အ][့း]*[်]|္[က-အ]|[ါ-ှ]){0,}|.)/g)
 
         console.log(temp)
@@ -148,17 +152,42 @@ function TextDetection(props) {
                     <div>
                         <ModalOverlay onClick={e => setShowModal(false)} />
                         <Modal className="animate__animated animate__slideInDown animate__fast">
-                            <span style={{ fontSize: "17px" }}>
-                                Word count : {result.length}
-                            </span>
-                            <div>
+                            {props.lan === "en"?
+                            <div style={{ fontSize: "15px",textAlign:"center" }}>
+                                <span style={{fontWeight:"bold",fontSize:"16px"}}>
+                                    Word Count : {result.length}
+                                </span> <br/>
+                                {
+                                result.length>max_count?
+                                 `Word count limit is over (${max_count})`:
+                                result.length<min_count?
+                                 `Word count should be at least ${min_count} words`: 
+                                 "Your word count is OK!"
+                                }
+                            </div>:
+                            <div style={{ fontSize: "15px",textAlign:"center" }}>
+                                <span style={{fontWeight:"bold",fontSize:"16px"}}>
+                                    စာလုံးရေ {result.length} လုံး
+                                </span><br/>
+                                {
+                                result.length>max_count?
+                                 `စာလုံးရေအများဆုံး ${max_count}လုံးကို ကျော်နေသည်`:
+                                result.length<min_count?
+                                 `စာလုံးရေအနည်းဆုံး ${min_count}လုံး ပြည့်ရမည်`
+                                 :"စာလုံးရေပြည့်သည်!"
+                                }
+                            </div>
+                            }
+                            <div style={{display:"flex"}}>
                                 <Button onClick={e => setShowModal(false)} close>OK</Button>
 
+                                {result.length <= max_count && result.length >= min_count &&
                                 <Button>
-                                    <a href="#" style={{ textDecoration: "none", color:"inherit" }}>
+                                    <a href={form_link} style={{ textDecoration: "none", color:"inherit" }}>
                                         Submit Article
                                     </a>
                                 </Button>
+                                }
                             </div>
                         </Modal>
                     </div>

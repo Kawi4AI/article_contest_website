@@ -2,6 +2,8 @@ import React from 'react'
 
 import { connect } from 'react-redux'
 
+const form_link = "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAASkcDdhUNjY2MjlOWllQWFdQN0lTWEhLWlRGQzg4NC4u"
+
 function Front(props) {
 
     return (
@@ -13,7 +15,7 @@ function Front(props) {
             <div className="right_home">
                 {props.lan === "en" ?
                     <h1 data-aos="fade-left" data-aos-delay="200" style={{marginBottom:"30px"}}>
-                        Myanmar Election <br /> Article Contest 2020
+                        2020 Myanmar Election <br /> Article Contest 
                     </h1> :
                     <h1 data-aos="fade-left" data-aos-delay="200" style={{marginBottom:"30px"}}>
                         ၂၀၂၀ မြန်မာ့ရွေးကောက်ပွဲ <br /> ဆိုင်ရာ ဆောင်းပါးပြိုင်ပွဲ 
@@ -21,11 +23,11 @@ function Front(props) {
                 }
                 
                 {props.lan === "en" ?
-                    <a href="#" style={{ textDecoration: "none", color: "inherit" }}>
+                    <a href={form_link} style={{ textDecoration: "none", color: "inherit" }}>
                         <button class="home_button_desktop" data-aos="fade-up" data-aos-delay="700">Submit Application Form</button>
                         <button class="home_button_mobile">Submit Application Form</button>
                     </a> :
-                    <a href="#" style={{ textDecoration: "none", color: "inherit" }}>
+                    <a href={form_link} style={{ textDecoration: "none", color: "inherit" }}>
                     <button class="home_button_desktop" data-aos="fade-up" data-aos-delay="700">လျှောက်လွှာတင်ရန်</button>
                     <button class="home_button_mobile">လျှောက်လွှာတင်ရန်</button>
                 </a>

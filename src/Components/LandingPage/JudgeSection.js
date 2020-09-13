@@ -46,7 +46,7 @@ function JudgeSection(props) {
                 </div>
                 <div class="person_card" data-aos="fade-up">
                     <img src="images/Htun Lin Kyaw.jpg" alt="Person Info" />
-                    <h2>ဒေါက်တာထွန်းလင်းကျော်</h2>
+                    <h2>ဒေါက်တာ ထွန်းလင်းကျော်</h2>
                     <p>တွဲဖက်ပါမောက္ခ<br />(မြန်မာစာဌာန)</p>
                     <p>နည်းပညာတက္ကသိုလ်<br />(ရတနာပုံဆိုက်ဘာစီးတီး)</p>
                 </div>

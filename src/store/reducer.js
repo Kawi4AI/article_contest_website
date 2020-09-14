@@ -1,6 +1,6 @@
 import * as actionTypes from './actions'
 
-const initialState = {lan : "en"}
+let initialState = {lan : "en"}
 
 const reducer = ( state = initialState, action) =>{
 

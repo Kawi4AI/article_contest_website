@@ -30,7 +30,7 @@ function AboutUs(props) {
             </div> */}
             {props.lan === "en" ?
                 <div style={{
-                    margin: "auto", wordWrap: "break-word", width: "90%", textAlign: "left",
+                    margin: "auto", wordWrap: "break-word", width: "90%", textAlign: "center",
                     background: "linear-gradient(315deg, #e6e6e6, #ffffff)", padding: "15px", borderRadius: "15px", 
                     fontSize: "17px", backgroundColor: "#08f",color: "black", paddingTop: "30px", paddingBottom: "30px",
                      lineHeight: "1.8em", boxShadow: "0px 0px 10px -3px rgba(150,150,150,1)",minHeight:"300px",

@@ -6,6 +6,8 @@ import * as actionTypes from '../../store/actions'
 
 function Navigation(props) {
 
+    //const [language, setLanguage] = React.useState(props.lan)
+
     React.useEffect(() => {
         window.addEventListener("scroll", function () {
             document.querySelector(".header").classList.toggle("active", window.scrollY > 0);
@@ -31,14 +33,16 @@ function Navigation(props) {
                 }
             });
         });
+
+
     }, [])
 
-    const [language, setLanguage] = React.useState(props.lan)
+    
 
-    const handleLanguage = () => {
-        language === "mm" ? setLanguage("en") : setLanguage("mm")
-        props.onLanguageChange(language)
-    }
+    // const handleLanguage = () => {
+    //     language === "mm" ? setLanguage("en") : setLanguage("mm")
+    //     props.onLanguageChange(language)
+    // }
 
     return (<>
         <nav className="header">
@@ -54,8 +58,8 @@ function Navigation(props) {
                     <li>Text-Detection</li>
                 </Link>
                 <Switch
-                    checked={language === "en"}
-                    onChange={handleLanguage}
+                    checked={props.lan === "en"}
+                    onChange={() => props.onLanguageChange(props.lan)}
                     uncheckedIcon={
                         <div
                             style={{
@@ -109,8 +113,8 @@ function Navigation(props) {
                     <li>Text-Detection</li>
                 </Link>
             <Switch
-                checked={language === "en"}
-                onChange={handleLanguage}
+                checked={props.lan === "en"}
+                onChange={() => props.onLanguageChange(props.lan)}
                 uncheckedIcon={
                     <div
                         style={{

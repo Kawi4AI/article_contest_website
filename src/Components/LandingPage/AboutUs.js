@@ -30,20 +30,24 @@ function AboutUs(props) {
             </div> */}
             {props.lan === "en" ?
                 <div style={{
-                    margin: "auto", wordWrap: "break-word", width: "90%", textAlign: "justify",
+                    margin: "auto", wordWrap: "break-word", width: "90%", textAlign: "left",
                     background: "linear-gradient(315deg, #e6e6e6, #ffffff)", padding: "15px", borderRadius: "15px", 
                     fontSize: "17px", backgroundColor: "#08f",color: "black", paddingTop: "30px", paddingBottom: "30px",
-                     lineHeight: "1.8em", boxShadow: "0px 0px 10px -3px rgba(150,150,150,1)",minHeight:"350px",maxWidth:"500px",position:"relative" }}
+                     lineHeight: "1.8em", boxShadow: "0px 0px 10px -3px rgba(150,150,150,1)",minHeight:"300px",
+                     maxWidth:"500px",position:"relative",marginBottom: "70px" }}
                     data-aos="fade-up">
-                   Kawi, a Myanmar's Artificial Intelligence and Data Science startup, is established on 19 June of the year 2020.
-                   <br/> We analyzed the best contributions we can make based on our passion and targeted onto that ideas: that is destined for giving the best AI solutions to our industries and encouraging the AI skills and capacities of Myanmar's youth
+                     Kawi, a Myanmar's Artificial Intelligence and Data Science startup, is established on 19 June 
+                     of the year 2020.
+                   <br/> We analyzed the best contributions we can make based on our passion and targeted 
+                    onto that ideas: that is destined for giving the best AI solutions to our industries and 
+                    encouraging the AI skills and capacities of Myanmar's youth.
                </div>:
                 <div style={{
                     margin: "auto", wordWrap: "break-word", width: "90%", textAlign: "center",
                     background: "linear-gradient(315deg, #e6e6e6, #ffffff)", padding: "15px", borderRadius: "15px", 
                     fontSize: "17px", backgroundColor: "#08f", color: "black", paddingTop: "30px", paddingBottom: "30px",
                     lineHeight: "1.8em", boxShadow: "0px 0px 10px -3px rgba(150,150,150,1)",position:"relative",
-                    marginBottom: "50px"}}
+                    marginBottom: "70px"}}
                     data-aos="fade-up">
                     "ကဝိ" ဆိုတဲ့ လူငယ်တွေနဲ့ ဖွဲ့စည်းထားတဲ့ အဖွဲ့အစည်းလေးဟာ ဆိုရင် ဇွန်လ ၁၉ ရက်နေ့ ၂၀၂၀ ပြည့်နှစ်တွင် စတင် အကောင်ထည်ဖော်ခဲ့ပြီး
                     မြန်မာနိုင်ငံရဲ့ Artificial Intelligence နဲ့ Data Science Startup လေးတစ်ခု အဖြစ် ယနေ့တိုင် ရပ်တည်လျက်ရှိပါတယ်။

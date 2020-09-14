@@ -32,7 +32,7 @@ const TextArea = styled.textarea`
     }
 `
 const Button = styled.button`
-    min-width: ${props => props.submit ? "120px" : "70px"};
+    min-width: ${props => props.submit ? "120px" : "100px"};
     margin: auto;
     margin-top: 20px;
     display: block;
@@ -77,7 +77,7 @@ const Modal = styled.div`
 	width: 300px;
 	height: auto;
     margin: auto;
-    margin-top: -350px;
+    margin-top: -370px;
     padding: 10px;
     padding-top: 30px;
     padding-bottom: 30px; 
@@ -161,7 +161,7 @@ function TextDetection(props) {
                                 result.length>max_count?
                                  `Word count limit is over (${max_count})`:
                                 result.length<min_count?
-                                 `Word count should be at least ${min_count} words`: 
+                                 `Word count should be at least ${min_count}`: 
                                  "Your word count is OK!"
                                 }
                             </div>:
@@ -184,10 +184,12 @@ function TextDetection(props) {
                                 {result.length <= max_count && result.length >= min_count &&
                                 <Button>
                                     <a href={form_link} style={{ textDecoration: "none", color:"inherit" }}>
-                                        Submit Article
+                                        {props.lan === "en"?
+                                         "Next" : "ဆက်ရန်"
+                                        }
                                     </a>
                                 </Button>
-                                }
+                                 } 
                             </div>
                         </Modal>
                     </div>

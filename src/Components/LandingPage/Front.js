@@ -2,7 +2,7 @@ import React from 'react'
 
 import { connect } from 'react-redux'
 
-const form_link = "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAASkcDdhUNjY2MjlOWllQWFdQN0lTWEhLWlRGQzg4NC4u"
+const form_link = "https://docs.google.com/forms/d/e/1FAIpQLSee8eOreVH-vwZfdqECSM0Ja655Wa1UC7NzEHSKfF_mVPzVgQ/viewform"
 
 function Front(props) {
 

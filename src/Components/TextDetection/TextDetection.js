@@ -6,7 +6,7 @@ import {connect} from 'react-redux'
 
 const max_count = 2500
 const min_count = 1600
-const form_link = "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAASkcDdhUNjY2MjlOWllQWFdQN0lTWEhLWlRGQzg4NC4u"
+const form_link = "https://docs.google.com/forms/d/e/1FAIpQLSee8eOreVH-vwZfdqECSM0Ja655Wa1UC7NzEHSKfF_mVPzVgQ/viewform"
 
 const Form = styled.form`
     width: 70%;
@@ -111,9 +111,11 @@ function TextDetection(props) {
     const handleCheck = (e) => {
         e.preventDefault();
 
-        let temp = text.replace(/[\s\[\]:;\/\->|{}+-=<!,•`~'*)@#%(&$_?.^"။၊]/g, '')
-            .match(/(([a-zA-Z0-9]+)|[က-အ|ဥ|ဦ](င်္|[က-အ][့း]*[်]|္[က-အ]|[ါ-ှ]){0,}|.)/g)
-
+        let temp = text.replace(/[\[\]•:;\/\->|{}+-]/g,'')
+                        .replace(/[<!,"\'*)@#%(&$_?.^"။၊]/g,'')
+                        .match(/(([a-zA-Z0-9]+)|[က-အ|ဥ|ဦ](င်္|[က-အ][့း]*[်]|္[က-အ]|[ါ-ှ]){0,}|.)/g)
+                        .filter(char => char !== " ")
+                        
         console.log(temp)
 
         setResult(temp)

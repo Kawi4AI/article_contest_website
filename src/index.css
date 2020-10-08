@@ -713,13 +713,13 @@ nav .switch {
 }
 
 .our_partners .our_partners_main img:nth-child(1) {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
 }
 
 .our_partners .our_partners_main img:nth-child(2) {
   width: 250px;
-  height: 100px;
+  height: 250px;
 }
 
 .our_partners .our_partners_main img:nth-child(3) {
@@ -1302,12 +1302,12 @@ footer .right_footer .copyright .line_break {
     margin: 20px;
   }
   .our_partners .our_partners_main img:nth-child(1) {
-    width: 200px;
+    width: 250px;
     height: 200px;
   }
   .our_partners .our_partners_main img:nth-child(2) {
     width: 250px;
-    height: 100px;
+    height: 200px;
   }
   .our_partners .our_partners_main img:nth-child(3) {
     width: 150px;

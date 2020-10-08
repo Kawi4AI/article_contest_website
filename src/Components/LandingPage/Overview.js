@@ -11,15 +11,15 @@ function Overview(props) {
                     <p ><span className="header_span">Awards</span>
                         <br/>
                         <ul style={{ marginLeft:"20px"}}>
-                            <li> First Prize - 100,000KS </li>
-                            <li> Second Prize - 70,000KS </li>
-                            <li> Third Prize - 50,000KS</li>
+                            <li> First Prize - 500,000KS </li>
+                            <li> Second Prize - 300,000KS </li>
+                            <li> Third Prize - 200,000KS</li>
                         </ul>
                     </p>
                     <p ><span className="header_span">Application Period</span> 
                         <br/>
                         <ul style={{ marginLeft:"20px"}}>
-                            <li> 15th September, 2020 - 30th September 2020</li>
+                            <li> 15th September, 2020 - 10th October, 2020</li>
                         </ul>
                     </p>
                     <p ><span className="header_span">Qualification Requirements</span>
@@ -62,14 +62,14 @@ function Overview(props) {
                 <div className="overview_main" data-aos="fade-in" style={{wordWrap:"break-word"}} >
                     <p ><span className="header_span" >ဆုအမျိုးအစား</span> <br/>
                         <ul style={{marginLeft:"20px"}}>
-                            <li > ပထမဆု-၁၀၀,၀၀၀ ကျပ် </li>
-                            <li > ဒုတိယဆု-၇၀,၀၀၀ ကျပ် </li>
-                            <li > တတိယဆု-၅၀,၀၀၀ ကျပ်</li>
+                            <li > ပထမဆု-၅၀၀,၀၀၀ ကျပ် </li>
+                            <li > ဒုတိယဆု-၃၀၀,၀၀၀ ကျပ် </li>
+                            <li > တတိယဆု-၂၀၀,၀၀၀ ကျပ်</li>
                         </ul>
                     </p>
                     <p ><span className="header_span">ဆောင်းပါး တင်ရန်လက်ခံကာလ</span> <br/>
                     <ul style={{marginLeft:"20px"}}>
-                        <li>စက်တင်ဘာလ ၊ ၁၅ရက် ၊ ၂၀၂၀ (အင်္ဂါနေ့) မှ စက်တင်ဘာလ ၊ ၃၀ရက် ၊ ၂၀၂၀ (ဗုဒ္ဓဟူးနေ့) အထိ။</li>
+                        <li>စက်တင်ဘာလ ၊ ၁၅ရက် ၊ ၂၀၂၀ (အင်္ဂါနေ့) မှ အောက်တိုဘာလ ၊ ၁၀ရက် ၊ ၂၀၂၀ (စနေနေ့) အထိ။</li>
                     </ul>
                     </p>
                     <p ><span className="header_span">လိုအပ်ချက်များ </span>

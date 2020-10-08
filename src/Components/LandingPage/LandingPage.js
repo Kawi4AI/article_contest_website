@@ -8,6 +8,7 @@ import Footer from '../Footer/Footer'
 import OurCommunity from './OurCommunity'
 import OurPartners from './OurPartners'
 import AboutUs from './AboutUs'
+import Endorse from './Endorse'
 
 function LandingPage() {
 
@@ -19,6 +20,7 @@ function LandingPage() {
             <Overview />
             <JudgeSection />
             <OurCommunity />
+            <Endorse />
             <OurPartners />
             <AboutUs />
             <Footer />

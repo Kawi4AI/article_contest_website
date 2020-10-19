@@ -737,6 +737,67 @@ nav .switch {
   height: 100px;
 }
 
+.endorse{
+  position: relative;
+  width: 100%;
+}
+.endorse h1 {
+  text-align: center;
+  font-size: 40px;
+  padding: 50px 0px 50px 0px;
+  letter-spacing: 2px;
+}
+.endorse > div{
+  display: flex;
+  width: 60%;
+  margin: auto;
+  padding-bottom: 60px;
+  justify-content: center;
+}
+.endorse img{
+  height: 200px;
+}
+.endorse img:nth-child(1){
+  width: 55%;
+  padding-right: 20px;
+}
+.endorse img:nth-child(2){
+  padding-left: 20px;
+}
+
+@media screen and (max-width:1024px){
+  .endorse > div{
+   width: 80%;
+  }
+}
+@media screen and (max-width:700px){
+  .endorse > div{
+   width: 95%;
+  }
+}
+@media screen and (max-width:600px){
+  .endorse > div{
+   width: 95%;
+  }
+  .endorse img{
+    height: 150px;
+  }
+}
+@media screen and (max-width:420px){
+  .endorse > div{
+   width: 98%;
+  }
+  .endorse img{
+    height: 100px;
+  }
+  .endorse img:nth-child(1){
+    width: 55%;
+    padding-right: 10px;
+  }
+  .endorse img:nth-child(2){
+    padding-left: 5px;
+  }
+}
 
 .about_us {
   position: relative;
@@ -989,6 +1050,7 @@ footer .right_footer .copyright .line_break {
 
 
 @media screen and (max-width: 768px) {
+  
   nav {
     max-height: 12vh;
   }
